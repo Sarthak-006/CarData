@@ -1,6 +1,6 @@
-# CarData Marketplace
+# Radiator Springs Data Marketplace
 
-A decentralized marketplace for vehicle data, built with Next.js and powered by GROQ AI.
+A Pixar Cars-themed decentralized marketplace for vehicle data, built with Next.js and powered by GROQ AI.
 
 ## Deployment on Vercel
 
@@ -42,8 +42,8 @@ GROQ_API_KEY=your_groq_api_key_here
 
 ## Features
 
-- Real-time vehicle data visualization
-- AI-powered insights using GROQ
-- Decentralized data marketplace
-- Interactive dashboards
-- Privacy-focused data sharing controls 
+- Real-time vehicle data visualization with Lightning McQueen style insights
+- AI-powered insights by Doc Hudson using GROQ
+- Decentralized data marketplace styled as Radiator Springs Trading Post
+- Interactive dashboards with Pixar Cars character themes
+- Privacy-focused data sharing controls with Sheriff protection 

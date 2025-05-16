@@ -1,0 +1,173 @@
+<svg width="600" height="400" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with road and data elements -->
+  <rect x="0" y="280" width="600" height="120" fill="#555555" />
+  <rect x="0" y="0" width="600" height="280" fill="#87CEEB" opacity="0.3" />
+  
+  <!-- Road markings -->
+  <rect x="0" y="340" width="600" height="10" fill="#FFFFFF" />
+  <rect x="30" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="100" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="170" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="240" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="310" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="380" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="450" y="345" width="40" height="2" fill="#FFFF00" />
+  <rect x="520" y="345" width="40" height="2" fill="#FFFF00" />
+  
+  <!-- Data visualization elements -->
+  <path d="M50,200 L100,180 L150,190 L200,170 L250,160 L300,175 L350,155 L400,165 L450,145 L500,155 L550,135" 
+        stroke="#00C853" strokeWidth="3" fill="none" />
+  <circle cx="100" cy="180" r="5" fill="#00C853" />
+  <circle cx="200" cy="170" r="5" fill="#00C853" />
+  <circle cx="300" cy="175" r="5" fill="#00C853" />
+  <circle cx="400" cy="165" r="5" fill="#00C853" />
+  <circle cx="500" cy="155" r="5" fill="#00C853" />
+  
+  <!-- Digital particles/data points -->
+  <circle cx="120" cy="130" r="3" fill="#0091EA" opacity="0.7" />
+  <circle cx="150" cy="100" r="2" fill="#0091EA" opacity="0.7" />
+  <circle cx="180" cy="120" r="4" fill="#0091EA" opacity="0.7" />
+  <circle cx="210" cy="80" r="3" fill="#0091EA" opacity="0.7" />
+  <circle cx="240" cy="110" r="2" fill="#0091EA" opacity="0.7" />
+  <circle cx="270" cy="90" r="3" fill="#0091EA" opacity="0.7" />
+  <circle cx="300" cy="120" r="2" fill="#0091EA" opacity="0.7" />
+  <circle cx="330" cy="100" r="4" fill="#0091EA" opacity="0.7" />
+  <circle cx="360" cy="80" r="3" fill="#0091EA" opacity="0.7" />
+  <circle cx="390" cy="110" r="2" fill="#0091EA" opacity="0.7" />
+  <circle cx="420" cy="90" r="3" fill="#0091EA" opacity="0.7" />
+  <circle cx="450" cy="100" r="2" fill="#0091EA" opacity="0.7" />
+  <circle cx="480" cy="80" r="4" fill="#0091EA" opacity="0.7" />
+  
+  <!-- Lightning McQueen -->
+  <g transform="translate(120, 280) scale(0.8)">
+    <!-- Car body -->
+    <path d="M40,50 C40,30 100,30 140,50 L150,80 C150,100 140,110 120,110 L60,110 C40,110 30,100 30,80 Z" 
+          fill="#FF0000" />
+    
+    <!-- Windshield -->
+    <path d="M60,50 C80,40 100,40 120,50 L115,75 C100,65 80,65 65,75 Z" 
+          fill="#87CEEA" />
+    
+    <!-- Eyes -->
+    <ellipse cx="85" cy="60" rx="9" ry="12" fill="white" />
+    <ellipse cx="95" cy="60" rx="9" ry="12" fill="white" />
+    <circle cx="85" cy="62" r="5" fill="#0000AA" />
+    <circle cx="95" cy="62" r="5" fill="#0000AA" />
+    <circle cx="83" cy="60" r="2" fill="white" />
+    <circle cx="93" cy="60" r="2" fill="white" />
+    
+    <!-- Mouth -->
+    <path d="M75,80 C85,90 95,90 105,80" 
+          fill="none" stroke="black" strokeWidth="2" />
+    
+    <!-- Lightning bolt -->
+    <path d="M140,60 L160,60 L150,75 L170,75 L145,100 L150,80 L130,80 Z" 
+          fill="#FFFF00" />
+    
+    <!-- Wheels -->
+    <circle cx="55" cy="110" r="15" fill="black" />
+    <circle cx="55" cy="110" r="8" fill="#333333" />
+    <circle cx="125" cy="110" r="15" fill="black" />
+    <circle cx="125" cy="110" r="8" fill="#333333" />
+  </g>
+  
+  <!-- Mater -->
+  <g transform="translate(240, 290) scale(0.7)">
+    <!-- Truck body -->
+    <path d="M30,50 L160,50 C170,60 170,90 160,100 L30,100 C20,90 20,60 30,50 Z" 
+          fill="#8B4513" />
+    <path d="M160,50 L180,50 L180,100 L160,100 Z" 
+          fill="#A52A2A" />
+    
+    <!-- Cabin -->
+    <path d="M30,50 L80,50 L80,20 L50,20 L30,50 Z" 
+          fill="#A52A2A" />
+    
+    <!-- Eyes -->
+    <ellipse cx="65" cy="35" rx="8" ry="10" fill="white" />
+    <ellipse cx="45" cy="35" rx="8" ry="10" fill="white" />
+    <circle cx="65" cy="37" r="4" fill="#8B4513" />
+    <circle cx="45" cy="37" r="4" fill="#8B4513" />
+    <circle cx="66" cy="35" r="1.5" fill="white" />
+    <circle cx="46" cy="35" r="1.5" fill="white" />
+    
+    <!-- Mouth -->
+    <path d="M40,50 C50,60 60,60 70,50" 
+          fill="none" stroke="black" strokeWidth="2" />
+    
+    <!-- Tow hook -->
+    <path d="M180,80 L200,80 L200,90 C190,90 190,70 180,70 Z" 
+          fill="#555555" />
+    
+    <!-- Wheels -->
+    <circle cx="50" cy="100" r="12" fill="black" />
+    <circle cx="50" cy="100" r="6" fill="#333333" />
+    <circle cx="140" cy="100" r="12" fill="black" />
+    <circle cx="140" cy="100" r="6" fill="#333333" />
+  </g>
+  
+  <!-- Doc Hudson -->
+  <g transform="translate(360, 285) scale(0.7)">
+    <!-- Car body -->
+    <path d="M30,50 C30,30 150,30 170,50 L180,80 C180,100 170,110 150,110 L50,110 C30,110 20,100 20,80 Z" 
+          fill="#000080" />
+    
+    <!-- Windshield -->
+    <path d="M50,50 C80,40 120,40 150,50 L145,75 C120,65 80,65 55,75 Z" 
+          fill="#87CEEA" />
+    
+    <!-- Eyes -->
+    <ellipse cx="85" cy="60" rx="9" ry="12" fill="white" />
+    <ellipse cx="115" cy="60" rx="9" ry="12" fill="white" />
+    <circle cx="85" cy="62" r="5" fill="#444444" />
+    <circle cx="115" cy="62" r="5" fill="#444444" />
+    <circle cx="83" cy="60" r="2" fill="white" />
+    <circle cx="113" cy="60" r="2" fill="white" />
+    
+    <!-- Mouth -->
+    <path d="M85,80 C95,85 105,85 115,80" 
+          fill="none" stroke="black" strokeWidth="2" />
+    
+    <!-- Data icons around Doc -->
+    <rect x="160" y="40" width="10" height="15" fill="#00C853" />
+    <rect x="165" y="35" width="10" height="15" fill="#00C853" />
+    <rect x="170" y="45" width="10" height="15" fill="#00C853" />
+    
+    <!-- Wheels -->
+    <circle cx="55" cy="110" r="15" fill="black" />
+    <circle cx="55" cy="110" r="8" fill="#333333" />
+    <circle cx="145" cy="110" r="15" fill="black" />
+    <circle cx="145" cy="110" r="8" fill="#333333" />
+  </g>
+  
+  <!-- Fillmore (VW Bus) -->
+  <g transform="translate(480, 275) scale(0.6)">
+    <!-- Bus body -->
+    <rect x="20" y="30" width="160" height="80" rx="10" ry="10" fill="#4CAF50" />
+    
+    <!-- Windows -->
+    <rect x="30" y="40" width="30" height="25" rx="5" ry="5" fill="#87CEEA" />
+    <rect x="70" y="40" width="30" height="25" rx="5" ry="5" fill="#87CEEA" />
+    <rect x="110" y="40" width="30" height="25" rx="5" ry="5" fill="#87CEEA" />
+    <rect x="150" y="40" width="20" height="25" rx="5" ry="5" fill="#87CEEA" />
+    
+    <!-- Eyes -->
+    <ellipse cx="45" cy="52" rx="8" ry="10" fill="white" />
+    <ellipse cx="65" cy="52" rx="8" ry="10" fill="white" />
+    <circle cx="45" cy="54" r="4" fill="#4CAF50" />
+    <circle cx="65" cy="54" r="4" fill="#4CAF50" />
+    <circle cx="46" cy="52" r="1.5" fill="white" />
+    <circle cx="66" cy="52" r="1.5" fill="white" />
+    
+    <!-- Hippie symbols -->
+    <circle cx="100" cy="80" r="15" fill="#FFFFFF" stroke="#000000" strokeWidth="2" />
+    <path d="M100,65 L100,95 M85,80 L115,80" stroke="#000000" strokeWidth="2" />
+    <path d="M90,70 L110,90 M90,90 L110,70" stroke="#000000" strokeWidth="2" />
+    
+    <!-- Wheels -->
+    <circle cx="50" cy="110" r="12" fill="black" />
+    <circle cx="50" cy="110" r="6" fill="#333333" />
+    <circle cx="150" cy="110" r="12" fill="black" />
+    <circle cx="150" cy="110" r="6" fill="#333333" />
+  </g>
+</svg> 

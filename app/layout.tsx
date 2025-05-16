@@ -7,6 +7,7 @@ import Navbar from "@/components/navbar"
 import { Toaster } from "@/components/ui/toaster"
 import { AuthProvider } from "@/context/auth-context"
 import { DataProvider } from "@/context/data-context"
+import { ParaProvider } from "@/context/para-context"
 
 export default function RootLayout({
   children,
@@ -22,15 +23,17 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <AuthProvider>
-            <DataProvider>
-              <div className="flex min-h-screen flex-col">
-                <Navbar />
-                <main className="flex-1">{children}</main>
-              </div>
-              <Toaster />
-            </DataProvider>
-          </AuthProvider>
+          <ParaProvider>
+            <AuthProvider>
+              <DataProvider>
+                <div className="flex min-h-screen flex-col">
+                  <Navbar />
+                  <main className="flex-1">{children}</main>
+                </div>
+                <Toaster />
+              </DataProvider>
+            </AuthProvider>
+          </ParaProvider>
         </ThemeProvider>
       </body>
     </html>

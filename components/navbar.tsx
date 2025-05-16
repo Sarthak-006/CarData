@@ -5,28 +5,31 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { useAuth } from "@/context/auth-context"
-import { Menu, X, Car } from "lucide-react"
+import { Menu, X, Wallet } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { LightningMcQueenIcon } from "./car-icons"
+import { usePara } from "@/context/para-context"
 
 const navLinks = [
-  { name: "Dashboard", href: "/dashboard" },
-  { name: "Marketplace", href: "/marketplace" },
-  { name: "AI Insights", href: "/insights" },
-  { name: "My Data", href: "/my-data" },
+  { name: "Speedway", href: "/dashboard" },
+  { name: "Trading Post", href: "/marketplace" },
+  { name: "Doc's Analysis", href: "/insights" },
+  { name: "My Garage", href: "/my-data" },
 ]
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const { user, login, logout } = useAuth()
+  const { hasWallet } = usePara()
 
   return (
     <header className="bg-white shadow-sm">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-            <Car className="h-8 w-8 text-emerald-600" />
-            <span className="ml-2 text-xl font-bold text-emerald-800">CarData</span>
+            <LightningMcQueenIcon className="h-8 w-8 text-red-600" />
+            <span className="ml-2 text-xl font-bold text-emerald-800">Radiator Springs</span>
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -53,13 +56,24 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6">
+          <Link
+            href="/wallet"
+            className={cn(
+              "flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-emerald-600",
+              pathname === '/wallet' && "text-emerald-600",
+            )}
+          >
+            <Wallet className="h-5 w-5 mr-1" />
+            {hasWallet ? "My Wallet" : "Connect Wallet"}
+          </Link>
+
           {user ? (
             <Button variant="outline" onClick={logout}>
-              Log out
+              Park It
             </Button>
           ) : (
-            <Button onClick={login}>Connect Wallet</Button>
+            <Button onClick={login}>Start Your Engine</Button>
           )}
         </div>
       </nav>
@@ -71,8 +85,8 @@ export default function Navbar() {
           <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-                <Car className="h-8 w-8 text-emerald-600" />
-                <span className="ml-2 text-xl font-bold text-emerald-800">CarData</span>
+                <LightningMcQueenIcon className="h-8 w-8 text-red-600" />
+                <span className="ml-2 text-xl font-bold text-emerald-800">Radiator Springs</span>
               </Link>
               <button
                 type="button"
@@ -99,15 +113,29 @@ export default function Navbar() {
                       {link.name}
                     </Link>
                   ))}
+
+                  <Link
+                    href="/wallet"
+                    className={cn(
+                      "-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50",
+                      pathname === '/wallet' && "bg-gray-50 text-emerald-600",
+                    )}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <div className="flex items-center">
+                      <Wallet className="h-5 w-5 mr-2" />
+                      {hasWallet ? "My Wallet" : "Connect Wallet"}
+                    </div>
+                  </Link>
                 </div>
                 <div className="py-6">
                   {user ? (
                     <Button variant="outline" onClick={logout} className="w-full">
-                      Log out
+                      Park It
                     </Button>
                   ) : (
                     <Button onClick={login} className="w-full">
-                      Connect Wallet
+                      Start Your Engine
                     </Button>
                   )}
                 </div>

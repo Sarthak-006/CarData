@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Car, BarChart3, ShieldCheck, Coins } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
+import { DocHudsonIcon, LightningMcQueenIcon, SheriffIcon, FloIcon } from "@/components/car-icons"
 
 export default function Home() {
   return (
@@ -12,16 +13,15 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Your Car Data, <span className="text-emerald-300">Your Asset</span>
+                Your Car Data, <span className="text-emerald-300">Vrooming with Value</span>
               </h1>
               <p className="text-lg md:text-xl mb-8">
-                Turn your vehicle's data into a revenue stream on our decentralized marketplace. Control what you share,
-                earn rewards, and contribute to the future of mobility.
+                Turn your vehicle's personality into a revenue stream on our decentralized marketplace. Share what makes your ride special, earn rewards, and join our Radiator Springs of mobility innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="/dashboard">
                   <Button size="lg" className="bg-white text-emerald-800 hover:bg-emerald-100 w-full sm:w-auto">
-                    Launch App <ArrowRight className="ml-2 h-5 w-5" />
+                    Start Your Engines <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
                 <Link href="/about">
@@ -30,15 +30,15 @@ export default function Home() {
                     size="lg"
                     className="border-white text-white hover:bg-white/10 w-full sm:w-auto"
                   >
-                    Learn More
+                    Meet The Cars
                   </Button>
                 </Link>
               </div>
             </div>
             <div className="relative h-64 md:h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Car data visualization"
+                src="/cars-hero.svg"
+                alt="Lightning McQueen and friends with data visualization"
                 fill
                 className="object-contain"
                 priority
@@ -51,28 +51,28 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 px-4 md:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How CarData Marketplace Works</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">How Radiator Springs Data Works</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <FeatureCard
-              icon={<Car className="h-10 w-10 text-emerald-600" />}
-              title="Connect Your Vehicle"
-              description="Easily connect to your car's OBD port or use our simulator to see what data your vehicle generates."
+              icon={<DocHudsonIcon className="h-14 w-14 text-blue-800" />}
+              title="Connect with Doc Hudson"
+              description="Let our resident expert analyze your car's health data with the wisdom of the Fabulous Hudson Hornet."
             />
             <FeatureCard
-              icon={<BarChart3 className="h-10 w-10 text-emerald-600" />}
-              title="Visualize Your Data"
-              description="See real-time analytics and insights about your driving patterns, vehicle health, and more."
+              icon={<LightningMcQueenIcon className="h-14 w-14 text-red-600" />}
+              title="Lightning Fast Insights"
+              description="Get McQueen-quality analytics and visualizations that help you understand your car's performance."
             />
             <FeatureCard
-              icon={<ShieldCheck className="h-10 w-10 text-emerald-600" />}
-              title="Control Your Privacy"
-              description="Choose exactly what data you want to share and with whom. You're always in control."
+              icon={<SheriffIcon className="h-14 w-14 text-gray-700" />}
+              title="Sheriff's Data Protection"
+              description="Choose exactly what data you want to share. We keep your information under Sheriff's watchful eye."
             />
             <FeatureCard
-              icon={<Coins className="h-10 w-10 text-emerald-600" />}
-              title="Earn Rewards"
-              description="Get paid in tokens when others purchase your anonymized data on our marketplace."
+              icon={<FloIcon className="h-14 w-14 text-teal-600" />}
+              title="Flo's Rewards Cafe"
+              description="Earn tokens at Flo's V8 Cafe when others purchase your anonymized data on our marketplace."
             />
           </div>
         </div>
@@ -81,14 +81,13 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-gray-100 py-20 px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Monetize Your Vehicle Data?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ka-Chow! Ready to Race Into Data Rewards?</h2>
           <p className="text-lg md:text-xl mb-8 text-gray-600">
-            Join thousands of drivers already earning rewards by sharing their vehicle data on our secure, decentralized
-            marketplace.
+            Join thousands of vehicles already earning their racing stripes by sharing their data on our secure, decentralized Piston Cup marketplace.
           </p>
           <Link href="/dashboard">
             <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              Get Started Now
+              Rev Your Engines Now
             </Button>
           </Link>
         </div>
