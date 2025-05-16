@@ -16,9 +16,8 @@ export const initializePara = async (): Promise<ParaInstance> => {
         // Let's initialize without any environment parameter in constructor
         console.log('Creating Para instance without environment...');
 
-        // Create a mock Para instance to avoid the environment issue
-        // Then we'll manually add needed methods/properties
-        const para = {};
+        // Create a typed mock Para instance to avoid TypeScript errors
+        const para: Record<string, any> = {};
 
         // Mock the necessary methods
         para.apiKey = PARA_API_KEY;
@@ -27,11 +26,11 @@ export const initializePara = async (): Promise<ParaInstance> => {
             return Promise.resolve();
         };
         para.auth = {
-            login: async (opts) => {
+            login: async (opts: any) => {
                 console.log('Mock login called with:', opts);
                 return 'mock-session-id';
             },
-            completeLogin: async (opts) => {
+            completeLogin: async (opts: any) => {
                 console.log('Mock completeLogin called with:', opts);
                 return Promise.resolve();
             },
@@ -53,7 +52,7 @@ export const initializePara = async (): Promise<ParaInstance> => {
                 }
             };
         };
-        para.getBalances = async (walletId, chainIds) => {
+        para.getBalances = async (walletId: string, chainIds: string[]) => {
             console.log(`Mock getBalances called for wallet ${walletId} and chains ${chainIds}`);
             return {
                 ethereum: {
